@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Software</title>
+    <title>Dynamic Programming</title>
     <link rel="Stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/google-code-prettify/prettify.css" >
     <!-- add more style sheets and javascripts -->
@@ -18,44 +18,63 @@
 
 <div class="content">
 
-<h1 id="toc_1">软件使用</h1>
+<h1 id="toc_1">Dynamic Programming</h1>
 <div class="toc">
 <ul>
-<li><a href="#toc_1">软件使用</a>
+<li><a href="#toc_1">Dynamic Programming</a>
 <ul>
-<li><a href="#toc_1.1">fcitx</a>
-<li><a href="#toc_1.2">conky</a>
+<li><a href="#toc_1.1">最优子结构</a>
+<ul>
+<li><a href="#toc_1.1.1">参考</a>
+</ul>
 </ul>
 </ul>
 </div>
 
-<h2 id="toc_1.1">fcitx</h2>
-
-<ul>
-<li>
-Fcitx will always in <em>input status</em> of chinese no matter how we type trigger
-  keys.
-
-</ul>
-  
 <p>
-  =&gt; put the "EN US Layout" at the first of Input Methods.
+动态规划的基本思想是 <strong>记忆</strong> 子问题的结果，以达到减少原问题的计算量。
 </p>
-  
-<h2 id="toc_1.2">conky</h2>
 
+<p>
+能用动态规划解决的问题有两个基本特征： <strong>重叠子问题</strong> 与 <strong>最优子结构</strong> 。重叠子问
+题意味着"记忆"的结果用得上，最优子结构意味着记忆的结果是正确的。
+</p>
+
+<p>
+而如果问题本身没有这两个特点，则应放弃使用动态规划（因为也用不了）。
+</p>
+
+<h2 id="toc_1.1">最优子结构</h2>
+
+<p>
+如果我们将一个问题分解为多个子问题，原问题的最优解，可以通过对子问题的最优解，
+进行某种运算得到，则称该问题有"最优子结构"。
+</p>
+
+<p>
+通常情况下，使用贪心算法解决这类问题，前提是贪心算法能得到全局最优解。如果不
+存在，但分解的子问题有重叠，则采用动态规划。否则一般则使用暴力搜索的方法。
+</p>
+
+<p>
+最优子结构的问题举例：
+</p>
 <ul>
 <li>
-conky shows "0%" for "${mixer}"
-  =&gt; in my system, the mixer is actually controled by 'xfce4-mixer'.
-     So, run 'xfce4-mixer' and select the channels you want to control, then
-     re-start conky, and it should be OK now.
+最长公共子串
 
 <li>
-make conky show disk io usage.
-  =&gt; conky has options for disk io: \(diskio \)diskio_read $diskio_write
+归并排序
+
+<li>
+快速排序
 
 </ul>
+
+<h3 id="toc_1.1.1">参考</h3>
+<p>
+[1]: <a href="https://en.wikipedia.org/wiki/Optimal_substructure">https://en.wikipedia.org/wiki/Optimal_substructure</a>
+</p>
 
 </div>
 

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Linux Administration | Mark Wallace's vimwiki</title>
+    <title>Linux Administration</title>
     <link rel="Stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/google-code-prettify/prettify.css" >
     <!-- add more style sheets and javascripts -->
@@ -11,9 +11,9 @@
 <!--<body onload="prettyPrint()">-->
 <nav>
     <a href="index.html">Index</a>
-    <a href="sitemap.html">SiteMap</a>
-    <a href="https://lotabout.github.io">Blog</a>
     <a href="about.html">About</a>
+    <a href="https://lotabout.github.io">Blog</a>
+    <a href="sitemap.html">SiteMap</a>
 </nav>
 
 <div class="content">
@@ -31,6 +31,10 @@
 <ul>
 <li><a href="#toc_1.2.1">at</a>
 <li><a href="#toc_1.2.2">crontab</a>
+<li><a href="#toc_1.2.3">tar</a>
+<ul>
+<li><a href="#toc_1.2.3.1">List the contents of a file</a>
+</ul>
 </ul>
 <li><a href="#toc_1.3">Update Info dir file</a>
 </ul>
@@ -94,6 +98,30 @@ if [ -e "$dbus_session_file" ]; then
 fi
 </pre>
 
+<h3 id="toc_1.2.3">tar</h3>
+
+<h4 id="toc_1.2.3.1">List the contents of a file</h4>
+<ol>
+<li>
+list the contents of a tar file
+<pre>
+tar -tvf filename.tar
+</pre>
+
+<li>
+list the contents of a <code>.tar.gz</code> file
+<pre>
+tar -ztvf filename.tar.gz
+</pre>
+
+<li>
+list the contents of a <code>.tar.bz2</code> file
+<pre>
+tar -jtvf filename.tar.bz2
+</pre>
+
+</ol>
+
 <h2 id="toc_1.3">Update Info dir file</h2>
 
 <pre>
@@ -107,8 +135,7 @@ install-info &lt;info file&gt; --info-dir &lt;directory of 'dir'&gt;
 <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        //var disqus_shortname = 'lotaboutvimwiki'; // required: replace example with your forum shortname
-        var disqus_shortname = 'lotaboutlife'; // required: replace example with your forum shortname
+        var disqus_shortname = 'lotaboutvimwiki'; // required: replace example with your forum shortname
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
