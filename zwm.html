@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>zwm</title>
     <link rel="Stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/google-code-prettify/prettify.css" >
     <!-- add more style sheets and javascripts -->
@@ -18,151 +18,84 @@
 
 <div class="content">
 
-<h1 id="toc_1">LotAbout's vimwiki</h1>
+<h1 id="toc_1">zwm</h1>
 <div class="toc">
 <ul>
-<li><a href="#toc_1">LotAbout's vimwiki</a>
+<li><a href="#toc_1">zwm</a>
 <ul>
-<li><a href="#toc_1.1">My knowledge base</a>
-<li><a href="#toc_1.2">Software</a>
-<li><a href="#toc_1.3">Books</a>
-<li><a href="#toc_1.4">Topics</a>
-<li><a href="#toc_1.5">Misc</a>
-<li><a href="#toc_1.6">Games</a>
-<li><a href="#toc_1.7">Programming Languages</a>
-<li><a href="#toc_1.8">Project</a>
-<li><a href="#toc_1.9">Tmp</a>
+<li><a href="#toc_1.1">Design</a>
+<ul>
+<li><a href="#toc_1.1.1">Features needed</a>
+<li><a href="#toc_1.1.2">Concepts</a>
+</ul>
 </ul>
 </ul>
 </div>
 
-<h2 id="toc_1.1">My knowledge base</h2>
-<ul>
-<li>
-<a href="slackware maintanance.html">slackware maintanance</a> -- Be a system administrator
-
-<li>
-<a href="Ubuntu.html">Ubuntu</a>
-
-<li>
-<a href="Linux Administration.html">Linux Administration</a>
-
-<ul>
-<li>
-<a href="Software.html">Software</a>
-
-</ul>
-<li>
-<a href="Windows Administration.html">Windows Administration</a>
-
-</ul>
-
-<h2 id="toc_1.2">Software</h2>
-
-<ul>
-<li>
-<a href="fcitx.html">fcitx</a> -- Input Method
-
-<li>
-<a href="firefox.html">firefox</a>
-
-<li>
-<a href="Thunderbird.html">Thunderbird</a>
-
-<li>
-<a href="racket.html">racket</a>
-
-<li>
-<a href="Linux Kernel.html">Linux Kernel</a>
-
-</ul>
-
-<h2 id="toc_1.3">Books</h2>
-
-<ul>
-<li>
-<a href="SICP.html">SICP</a> -- Structure
-
-<li>
-How to Solve it -- Polya
-
-<li>
-<a href="HtDP.html">HtDP</a> -- How to design programs
-
-</ul>
-
-<h2 id="toc_1.4">Topics</h2>
-
-<ul>
-<li>
-<a href="Musics.html">Musics</a>
-
-<li>
-<a href="English Words.html">English Words</a>
-
-<li>
-<a href="News Group.html">News Group</a>
-
-<li>
-<a href="Algorithm.html">Algorithm</a>s
-
-<li>
-<a href="Ideas.html">Ideas</a>
-
-</ul>
-
-<h2 id="toc_1.5">Misc</h2>
-<ul>
-<li>
-<a href="72 rule.html">72 rule</a>
-
-<li>
-<a href="little rule.html">little rule</a> -- little 定律
-
-</ul>
-
-<h2 id="toc_1.6">Games</h2>
-<ul>
-<li>
-<a href="2048.html">http://gabrielecirulli.github.io/2048/</a>
-
-</ul>
-
-<h2 id="toc_1.7">Programming Languages</h2>
-
-<ul>
-<li>
-<a href="python.html">python</a>
-
-<li>
-<a href="ruby.html">ruby</a>
-
-<li>
-<a href="Matlab.html">Matlab</a>
-
-<li>
-<a href="bash.html">bash</a>
-
-<li>
-<a href="sed.html">sed</a>
-
-</ul>
-
-<h2 id="toc_1.8">Project</h2>
-<ul>
-<li>
-<a href="zwm.html">zwm</a>
-
-</ul>
-
-<h2 id="toc_1.9">Tmp</h2>
 <p>
-<a href="Essay.html">Essay</a>
+My own window manager. Borrowed ideas from <a href="http://dwm.suckless.org">dwm</a> and
+<a href="http://i3wm.org/">i3wm</a>.
 </p>
 
-<p>
-<a href="FAQ.html">FAQ</a>s
-</p>
+<h2 id="toc_1.1">Design</h2>
+
+<h3 id="toc_1.1.1">Features needed</h3>
+<ul>
+<li>
+status bar + system tray (dwm+systray patches)
+
+<li>
+minimize window and area to show these windows
+
+<li>
+dynamic layout management
+
+<li>
+title bar(perhaps?)
+
+</ul>
+
+<h3 id="toc_1.1.2">Concepts</h3>
+<ul>
+<li>
+<em>Workspace</em>: Organize stasks using virtual desktop
+
+<ul>
+<li>
+workspaces are created/destroyed dynamically (like i3)
+
+</ul>
+<li>
+<em>frame</em>: Place to place windows.
+
+<ul>
+<li>
+mechanism to implement <em>minimize area</em>
+
+<li>
+A workspace normally have <em>main frame</em> and <em>minimize frame</em>.
+
+<li>
+no dynamic creation/destruction/management support for now
+
+</ul>
+<li>
+<em>Layout</em>: dynamic layouts(like dwm)
+
+<ul>
+<li>
+attached to every frame.
+
+</ul>
+<li>
+XCB/XLib ?
+
+<ul>
+<li>
+XCB is the latest preference. Nevertheless lacks good documentation.
+
+</ul>
+</ul>
 
 </div>
 
